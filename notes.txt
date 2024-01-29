@@ -1,0 +1,4 @@
+export BUCKET_NAME=a-unique-bucket-name
+aws s3api create-bucket --bucket surf-report-go --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
+
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o main main.go
